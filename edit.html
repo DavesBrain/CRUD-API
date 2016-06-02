@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html ng-app="portalApp">
+<head>
+    <title>Dave's Brain's Portal</title>
+    <script src="external/angular.min.js" type="text/javascript"></script>
+    <script src="external/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script src="js/controller.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body ng-controller="portalController as vm" id="edit">
+    <div id="wrapper">
+        <div class="header">
+            <h2>Dave's Links</h2>
+            <form class="logout">
+                <button>Logout</button>
+            </form>
+        </div>
+        <div class="category" ng-repeat="cat in vm.data">
+            <h2>{{cat.Name}}</h2>
+            <ul>
+                <li class="link" ng-repeat="Link in cat.Links">
+                    <div class="link-container">
+                        {{Link.LName}}
+                        <div class="edit-link">
+                            <input type="text" value="{{Link.LName}}"/>
+                            <input type="text" value="{{Link.URL}}"/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="subcategory" ng-repeat="SubCat in cat.SubCats">
+                <h3>{{SubCat.Name}}</h3>
+                <ul>
+                    <li class="link" ng-repeat="Link in SubCat.Links">
+                        <div class="link-container">
+                            {{Link.LName}}
+                            <div class="edit-link">
+                                <input type="text" value="{{Link.LName}}"/>
+                                <input type="text" value="{{Link.URL}}"/>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

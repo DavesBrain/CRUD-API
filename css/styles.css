@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 90%;
+}
+
+h2 {
+    font-size: 105%;
+    padding: 0;
+    margin: 0;
+    color: darkred;
+}
+h3 {
+    font-size: 90%;
+    padding: 0 4px;
+    margin: 0;
+    color: crimson;
+}
+
+#wrapper{
+    border: none;
+}
+.header {
+    height: 20px;
+    width: auto;
+}
+.header h2 {
+    float: left;
+}
+.header form.login,
+.header form.logout {
+    margin: 0;
+    float: right;
+}
+.category {
+    margin: 1px;
+    padding: 0;
+    border: 1px solid grey;
+    width: 180px;
+    display: inline;
+    float: left;
+}
+.category h2 {
+    background-color: crimson;
+    color: white;
+    padding: 2px 4px 3px;
+}
+.subcategory {
+    margin: 1px;
+    width: auto;
+}
+.category ul{
+    -webkit-margin-before: 5px;
+    -webkit-padding-start: 20px;
+    color: navy;
+}
+
+.category ul li{
+    margin: 0 0 2px;
+    padding: 0;
+    -webkit-padding-start: 0;
+    color: navy;
+}
+#view .link a,
+#edit .link > div{
+    text-decoration: none;
+    color: navy;
+    font-size: 90%;
+}
+#view .link a:hover{
+    text-decoration: underline;
+    color: red;
+}
+#edit .link > div:hover{
+    color: red;
+}
+#edit .link-container{
+    position: relative;
+}
+
+.editable-controls{
+    background-color: white;
+    position: absolute;
+    top:0;
+    z-index: 1;
+    padding: 1px;
+    border: 1px solid red;
+    
+}
+.editable-controls a.editable-click {
+    border-bottom: none !important;
+}
+
+/*
+
+
+#edit .link-container .edit-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#edit .link-container .edit-link.editing {
+    display: block;
+}
+*/
